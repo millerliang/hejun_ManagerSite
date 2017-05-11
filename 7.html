@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>首頁 - 後台管理系統</title>
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">try{ace.settings.check('navbar' , 'fixed')}catch(e){}</script>
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand"></a><!-- /.indexLogo -->
+				</div><!-- /.navbar-header -->
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav"></ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">try{ace.settings.check('main-container' , 'fixed')}catch(e){}</script>
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#"><span class="menu-text"></span></a>
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'fixed')}catch(e){}</script>
+					<ul class="nav nav-list"></ul><!-- /.nav-list -->
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}</script>
+						<ul class="breadcrumb">
+							<li class="active">
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">廠商管理</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<!-- <div class="page-header">
+							<h1>首頁<small><i class="icon-angle-double-right"></i>系統狀態</small></h1>
+						</div> --><!-- /.page-header -->
+
+						<div class="text-right top_toolbar">
+							<a href="#0" class="pushy-btn btn-sm btn--red">
+								新增法人廠商
+							</a>
+							<a href="#0" class="pushy-btn btn-sm btn--green">
+								新增自然人廠商
+							</a>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<div class="form-group">
+									<div class="input-group">
+										<select>
+											<option value="">狀態</option>
+											<option value="">Stust1</option>
+											<option value="">Stust2</option>
+										</select>
+										&nbsp;
+										<select>
+											<option value="">廠商屬性</option>
+											<option value="">T_1</option>
+											<option value="">T_2</option>
+										</select>
+										&nbsp;
+										<input type="text" class="search-query input-xlarge" placeholder="廠商名稱或簡稱">
+										&nbsp;
+										<button type="button" class="btn btn-purple btn-xs">
+											查詢
+											<i class="icon-search icon-on-right bigger-110"></i>
+										</button>
+									</div>
+								</div>
+								<hr>
+
+								<table class="table table-striped table-bordered table-hover width_auto">
+								  <thead>
+									<tr>
+									  <th>狀 態</th>
+									  <th>廠商ID</th>
+									  <th>廠商屬性</th>
+									  <th>廠商名稱</th>
+									  <th>簡 稱</th>
+									  <th>聯繫人姓名</th>
+									  <th>聯繫人手機</th>
+									  <th>聯繫人電郵</th>
+									  <th>團 購</th>
+									  <th>通 路</th>
+									  <th>操 作</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td><span class="green">待審</span></td>
+									  <td>G00001</td>
+									  <td>法人</td>
+									  <td>碁曄科技</td>
+									  <td>JYT</td>
+									  <td>林寧</td>
+									  <td>+886 918885678</td>
+									  <td>nl0803@hotmail.com</td>
+									  <td>開啟</td>
+									  <td>...</td>
+									  <td>
+										<button class="btn btn-xs btn-white btn-primary" href="#0"><i class="fa fa-pencil"></i> 編輯</button>
+										<button class="btn btn-xs btn-white btn-primary" href="#0"><i class="fa fa-trash-o"></i> 刪除</button>
+										<button class="btn btn-xs btn-white btn-primary" href="#0">發布</button>
+									  </td>
+									</tr>
+									<tr>
+									  <td>發布</td>
+									  <td></td>
+									  <td>自然人</td>
+									  <td>王大衛</td>
+									  <td>david</td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td>...</td>
+									  <td>開啟</td>
+									  <td>
+										<button class="btn btn-xs btn-white btn-primary" href="#0"><i class="fa fa-pencil"></i> 編輯</button>
+										<button class="btn btn-xs btn-white btn-primary" href="#0"><i class="fa fa-trash-o"></i> 刪除</button>
+									  </td>
+									</tr>
+									<tr>
+									  <td><span class="red">刪除</span></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td>
+										<button class="btn btn-xs btn-white btn-primary" href="#0"><i class="fa fa-pencil"></i> 編輯</button>
+										<button class="btn btn-xs btn-white btn-primary" href="#0"> 發布</button>
+									  </td>
+									</tr>
+								  </tbody>
+								</table>
+
+								<div class="row">
+								  <div class="col-sm-6">
+									<div class="dataTables_info">共 5 筆資料，目前在第 1 頁。</div>
+								  </div>
+								  <div class="col-sm-6">
+									<div class="dataTables_paginate paging_bootstrap">
+									  <ul class="pagination">
+										<li class="prev disabled"><a href="#"><i class="icon-angle-double-left"></i></a></li>
+										<li class="active"><a href="#">1</a></li>
+										<li class="next"><a href="#"><i class="icon-angle-double-right"></i></a></li>
+									  </ul>
+									</div>
+								  </div>
+								</div>
+
+								<div class="hr hr8 hr-double hr-dotted"></div>
+
+								<div class="row">
+									<div class="col-sm-5">
+										<article class="form-horizontal">
+											<ul class="breadcrumb">
+												<li>
+													<i class="icon-home home-icon"></i>
+													<a href="index.html">Home</a>
+												</li>
+												<li>
+													<a href="#0">廠商管理</a>
+												</li>
+												<li class="active">新增廠商(法人)</li>
+											</ul><!-- .breadcrumb -->
+											<hr>
+											<div class="row">
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">廠商屬性</label>
+													<div class="col-sm-7">
+														<select class="form-control">
+															<option value="">法人</option>
+															<option value="">自然人</option>
+														</select>
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">廠商名稱</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="廠商名稱">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">簡稱</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="簡稱">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人姓名</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人姓名">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人手機</label>
+													<div class="col-sm-7">
+														<section class="row">
+															<div class="col-sm-4">
+																<select class="form-control">
+																	<option value="">選擇國碼</option>
+																	<option value="">+996</option>
+																	<option value="">+886</option>
+																</select>
+															</div>
+															<div class="col-sm-8">
+																<input type="text" class="form-control" placeholder="填寫手機門號">
+															</div>
+														</section>
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人郵箱</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人郵箱">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人QQ</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人QQ">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人單位</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人單位">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人職稱</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人職稱">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人地址</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人地址">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人電話</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人電話">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">統一編號</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="統一編號">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">發票抬頭</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="發票抬頭">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">匯款銀行</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="匯款銀行">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">匯款戶名</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="匯款戶名">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">匯款帳號</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="匯款帳號">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">微信公眾號</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="微信公眾號">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">支付寶ID號</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="支付寶ID號">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">是否開啟通路</label>
+													<div class="col-sm-7">
+														<select class="form-control">
+															<option value="">否</option>
+															<option value="">是</option>
+														</select>
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">是否開啟團購</label>
+													<div class="col-sm-7">
+														<select class="form-control">
+															<option value="">是</option>
+															<option value="">否</option>
+														</select>
+													</div>
+												</section>
+
+												<section class="form-group">
+													<hr>
+													<blockquote class="col-sm-offset-3">
+														<div class="row">
+															<div class="col-sm-6">
+																<h5>編輯者姓名：XXX<br/><small><i class="fa fa-calendar"></i> yyyy-mm-dd hh:mm</small></h5>
+															</div>
+															<div class="col-sm-6">
+																<h5>審核者姓名：OOO<br/><small><i class="fa fa-calendar"></i> yyyy-mm-dd hh:mm</small></h5>
+															</div>
+														</div>
+													</blockquote>
+												</section>
+
+											</div><!-- /.row -->
+
+											<footer class="modal-footer center">
+												<button class="pushy-btn btn-sm btn--grey">
+													<i class="icon-times"></i>
+													取 消
+												</button>
+												<button class="pushy-btn btn-sm btn--red">
+													<i class="icon-check"></i>
+													確 認
+												</button>
+											</footer>
+										</article>
+									</div><!-- /.col-sm-5 -->
+
+									<div class="col-sm-5">
+										<article class="form-horizontal">
+											<ul class="breadcrumb">
+												<li>
+													<i class="icon-home home-icon"></i>
+													<a href="index.html">Home</a>
+												</li>
+												<li>
+													<a href="#0">廠商管理</a>
+												</li>
+												<li class="active">新增廠商(自然人)</li>
+											</ul><!-- .breadcrumb -->
+											<hr>
+											<div class="row">
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">廠商屬性</label>
+													<div class="col-sm-7">
+														<select class="form-control">
+															<option value="">自然人</option>
+															<option value="">法人</option>
+														</select>
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">姓名</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="姓名">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">簡稱</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="簡稱">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">性別</label>
+													<div class="col-sm-7">
+														<select class="form-control">
+															<option value="">女</option>
+															<option value="">男</option>
+														</select>
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">所屬機構</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="所屬機構">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">職稱</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="職稱">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人手機</label>
+													<div class="col-sm-7">
+														<section class="row">
+															<div class="col-sm-4">
+																<select class="form-control">
+																	<option value="">選擇國碼</option>
+																	<option value="">+996</option>
+																	<option value="">+886</option>
+																</select>
+															</div>
+															<div class="col-sm-8">
+																<input type="text" class="form-control" placeholder="填寫手機門號">
+															</div>
+														</section>
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人郵箱</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人郵箱">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人QQ</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人QQ">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人地址</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人地址">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">聯繫人電話</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="聯繫人電話">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">身分證號</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="身分證號">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">匯款銀行</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="匯款銀行">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">匯款戶名</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="匯款戶名">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">匯款帳號</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="匯款帳號">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">微信ID號</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="微信ID號">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">支付寶ID號</label>
+													<div class="col-sm-7">
+														<input type="text" class="form-control" placeholder="支付寶ID號">
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">是否開啟通路</label>
+													<div class="col-sm-7">
+														<select class="form-control">
+															<option value="">否</option>
+															<option value="">是</option>
+														</select>
+													</div>
+												</section>
+
+												<section class="form-group">
+													<label class="col-sm-3 control-label text-right">是否開啟團購</label>
+													<div class="col-sm-7">
+														<select class="form-control">
+															<option value="">是</option>
+															<option value="">否</option>
+														</select>
+													</div>
+												</section>
+
+												<section class="form-group">
+													<hr>
+													<blockquote class="col-sm-offset-3">
+														<div class="row">
+															<div class="col-sm-6">
+																<h5>編輯者姓名：XXX<br/><small><i class="fa fa-calendar"></i> yyyy-mm-dd hh:mm</small></h5>
+															</div>
+															<div class="col-sm-6">
+																<h5>審核者姓名：OOO<br/><small><i class="fa fa-calendar"></i> yyyy-mm-dd hh:mm</small></h5>
+															</div>
+														</div>
+													</blockquote>
+												</section>
+
+											</div><!-- /.row -->
+
+											<footer class="modal-footer center">
+												<button class="pushy-btn btn-sm btn--grey">
+													<i class="icon-times"></i>
+													取 消
+												</button>
+												<button class="pushy-btn btn-sm btn--red">
+													<i class="icon-check"></i>
+													確 認
+												</button>
+											</footer>
+										</article>
+									</div><!-- /.col-sm-5 -->
+
+								</div><!-- /.row -->
+
+								<div class="hr hr8 hr-double hr-dotted"></div>
+
+								<div class="row">
+									<div class="col-sm-6">
+										<ul class="breadcrumb">
+											<li>
+												<i class="icon-home home-icon"></i>
+												<a href="index.html">Home</a>
+											</li>
+											<li>
+												<a href="#0">廠商管理</a>
+											</li>
+											<li class="active">團購單</li>
+										</ul><!-- .breadcrumb -->
+										<hr>
+										<article class="form-horizontal">
+											<table class="table table-striped table-bordered table-hover width_auto">
+											  <thead>
+												<tr>
+												  <th>狀 態</th>
+												  <th>廠商名稱</th>
+												  <th>團購ID</th>
+												  <th>團購名稱</th>
+												  <th>開課日</th>
+												  <th>到期日</th>
+												  <th>價 格</th>
+												  <th>課程數</th>
+												  <th>帳號數</th>
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr>
+												  <td>待審</td>
+												  <td>第一金控</td>
+												  <td>G00001</td>
+												  <td>團購CCC</td>
+												  <td>YYYY-MM-DD</td>
+												  <td>YYYY-MM-DD</td>
+												  <td>49.00元</td>
+												  <td>10</td>
+												  <td>200</td>
+												</tr>
+												<tr>
+												  <td>發布</td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												</tr>
+												<tr>
+												  <td>下架</td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												</tr>
+												<tr>
+												  <td>過期</td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												</tr>
+												<tr>
+												  <td>刪除</td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												</tr>
+											  </tbody>
+											</table>
+										</article>
+									</div><!-- /.col-sm-6 -->
+
+									<div class="col-sm-6">
+										<ul class="breadcrumb">
+											<li>
+												<i class="icon-home home-icon"></i>
+												<a href="index.html">Home</a>
+											</li>
+											<li>
+												<a href="#0">廠商管理</a>
+											</li>
+											<li class="active">通路銷售狀態</li>
+										</ul><!-- .breadcrumb -->
+										<hr>
+										<article class="form-horizontal">
+											<table class="table table-striped table-bordered table-hover width_auto">
+											  <thead>
+												<tr>
+												  <th>狀 態</th>
+												  <th>通路ID</th>
+												  <th>網站網址</th>
+												  <th>導客數</th>
+												  <th>訂單數</th>
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr>
+												  <td>待審</td>
+												  <td>G00001</td>
+												  <td>www.jyt-inc.com</td>
+												  <td>125,798</td>
+												  <td>222</td>
+												</tr>
+												<tr>
+												  <td>發布</td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												</tr>
+												<tr>
+												  <td>下架</td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												</tr>
+												<tr>
+												  <td>過期</td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												</tr>
+												<tr>
+												  <td>刪除</td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												  <td></td>
+												</tr>
+											  </tbody>
+											</table>
+										</article>
+									</div><!-- /.col-sm-6 -->
+								</div>
+
+								<div class="hr hr8 hr-double hr-dotted"></div>
+
+								<div id="modal-form" class="modal fade in" tabindex="-1">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="red"><i class="fa fa-file-o"></i> 檢視檔案</h4>
+											</div>
+
+											<div class="modal-body form-horizontal overflow-visible">
+												<div class="row">
+													<div class="col-sm-3 col-sm-offset-1">
+														<div class="profile-picture"><img class="img-responsive" src="http://ace.jeka.by/assets/images/avatars/profile-pic.jpg"></div>
+														<div class="space-4"></div>
+														<div class="width-90 label label-danger label-xlg arrowed-in arrowed-in-right">
+															<div class="inline position-relative">
+																<span class="white">ning</span>
+															</div>
+														</div>
+														<!-- <div class="space-6"></div>
+														<p>
+															<i class="ace-icon fa fa-circle light-green"></i> Status<br/>
+															<i class="ace-icon fa fa-circle light-red"></i> ban<br/>
+															<i class="ace-icon fa fa-circle light-grey"></i> offline
+														</p> -->
+													</div>
+													<div class="col-sm-8">
+														<article class="profile-user-info profile-user-info-striped">
+
+															<section class="profile-info-row">
+																<div class="profile-info-name">講員姓名</div>
+
+																<div class="profile-info-value">
+																	<span id="username">ning</span>
+																</div>
+															</section>
+
+															<section class="profile-info-row">
+																<div class="profile-info-name">所屬機構</div>
+
+																<div class="profile-info-value">
+																	<span id="">---</span>
+																</div>
+															</section>
+
+															<section class="profile-info-row">
+																<div class="profile-info-name">職 稱</div>
+
+																<div class="profile-info-value">
+																	<span id="">---</span>
+																</div>
+															</section>
+
+															<section class="profile-info-row">
+																<div class="profile-info-name">性 別</div>
+
+																<div class="profile-info-value">
+																	<span id="">女</span>
+																</div>
+															</section>
+
+															<section class="profile-info-row">
+																<div class="profile-info-name">手 機</div>
+
+																<div class="profile-info-value">
+																	<span id="">+996 918885678</span>
+																</div>
+															</section>
+
+
+															<section class="profile-info-row">
+																<div class="profile-info-name">電 郵</div>
+
+																<div class="profile-info-value">
+																	<span id=""><a href="mailto:885678@hotmail.com"><i class="fa fa-envelope"></i> 885678@hotmail.com</a></span>
+																</div>
+															</section>
+
+															<section class="profile-info-row">
+																<div class="profile-info-name">QQ號</div>
+
+																<div class="profile-info-value">
+																	<span id="">---</span>
+																</div>
+															</section>
+
+															<section class="profile-info-row">
+																<div class="profile-info-name">簡 介</div>
+
+																<div class="profile-info-value">
+																	<span id="about">---</span>
+																</div>
+															</section>
+														</article>
+
+														<div class="space-6"></div>
+														<blockquote>
+															<h5>編輯者姓名：XXX<br/><small><i class="fa fa-calendar"></i> yyyy-mm-dd hh:mm</small></h5>
+															<h5>審核者姓名：OOO<br/><small><i class="fa fa-calendar"></i> yyyy-mm-dd hh:mm</small></h5>
+														</blockquote>
+
+													</div><!-- /.col-sm-8 -->
+
+												</div><!-- /.row -->
+											</div>
+
+											<div class="modal-footer center">
+												<button class="pushy-btn btn-sm btn--grey" data-dismiss="modal">
+													<i class="icon-times"></i>
+													關 閉
+												</button>
+												<button class="pushy-btn btn-sm btn--red">
+													<i class="fa fa-pencil"></i>
+													編 輯
+												</button>
+											</div>
+										</div>
+									</div>
+								</div><!-- /#modal-form -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"><i class="icon-angle-double-up icon-only bigger-110"></i></a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+		<!--[if !IE]> -->
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");</script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");</script>
+		<![endif]-->
+
+		<script type="text/javascript">if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/bootbox.min.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/excanvas.min.js"></script><![endif]-->
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			setTimeout(function(){
+				$(".nav-list").children('li:nth-child(8)').addClass("active");
+				//$(".nav-list .active ul").children('li:nth-child(1)').addClass("active");
+			},300); 
+		});
+		</script>
+	</body>
+</html>

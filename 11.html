@@ -1,31 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<title>會員管理 - 後台管理系統</title>
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- basic styles -->
-		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-		<!--[if IE 7]>
-			<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
-		<![endif]-->
-		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
-		<!--[if lte IE 8]>
-		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
-		<![endif]-->
-		<!-- ace settings handler -->
-		<script src="assets/js/ace-extra.min.js"></script>
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
+		<meta charset="utf-8">
+		<title>首頁 - 後台管理系統</title>
 	</head>
 
 	<body>
@@ -58,11 +35,11 @@
 					<div class="breadcrumbs" id="breadcrumbs">
 						<script type="text/javascript">try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}</script>
 						<ul class="breadcrumb">
-							<li>
+							<li class="active">
 								<i class="icon-home home-icon"></i>
 								<a href="index.html">Home</a>
 							</li>
-							<li class="active">會員管理</li>
+							<li class="active">積分管理</li>
 						</ul><!-- .breadcrumb -->
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
@@ -78,107 +55,98 @@
 						<!-- <div class="page-header">
 							<h1>首頁<small><i class="icon-angle-double-right"></i>系統狀態</small></h1>
 						</div> --><!-- /.page-header -->
-						
-						<div class="text-right__ top_toolbar">
-							<p>會員總數：10,000 人</p>
-						</div>
+
+						<!-- <div class="text-right top_toolbar">
+							<a href="#0" class="pushy-btn btn-sm btn--red">
+								新增促銷
+							</a>
+						</div> -->
 
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 								<div class="form-group">
 									<div class="input-group">
-										<input type="text" class="search-query input-xlarge" placeholder="輸入學號或電郵">
-										&nbsp;
 										<select>
-											<option value="">城市別</option>
-											<option value="">AAA</option>
-											<option value="">BBB</option>
-											<option value="">CCC</option>
-											<option value="">DDD</option>
+											<option value="">交易原因</option>
+											<option value="">Q_1</option>
+											<option value="">Q_2</option>
 										</select>
 										&nbsp;
-										<select>
-											<option value="">行政區</option>
-											<option value="">AAA</option>
-											<option value="">BBB</option>
-											<option value="">CCC</option>
-										</select>
-										&nbsp;
-										<select>
-											<option value="">學校</option>
-											<option value="">AAA</option>
-											<option value="">BBB</option>
-										</select>
-										&nbsp;
-										<select>
-											<option value="">學年度</option>
-											<option value="">AAA</option>
-											<option value="">BBB</option>
-										</select>
-										&nbsp;
-										<select>
-											<option value="">班級</option>
-											<option value="">AAA</option>
-											<option value="">BBB</option>
-											<option value="">CCC</option>
-											<option value="">DDD</option>
-										</select>
+										<input type="text" class="search-query input-xlarge" placeholder="交易會員ID">
 										&nbsp;
 										<button type="button" class="btn btn-purple btn-xs">
-											搜尋
+											查詢
 											<i class="icon-search icon-on-right bigger-110"></i>
 										</button>
 									</div>
 								</div>
+								<hr>
 
-								<style>.table tr th,.table tr td {text-align:center;}</style>
-								<table class="table table-striped table-bordered table-hover">
+								<table class="table table-striped table-bordered table-hover width_auto">
 								  <thead>
 									<tr>
-									  <th>註冊日期</th>
-									  <th>類 型</th>
-									  <th>電 郵</th>
-									  <th>姓 名</th>
-									  <th>地 區</th>
-									  <th>行政區</th>
-									  <th>註冊學校</th>
-									  <th>學 號</th>
-									  <th>前次記錄日期</th>
-									  <th>操 作</th>
+									  <th>積分單號</th>
+									  <th>交易日期</th>
+									  <th>交易會員ID</th>
+									  <th>交易原因</th>
+									  <th>獲贈積分</th>
+									  <th>支出積分</th>
+									  <th>備 註</th>
 									</tr>
 								  </thead>
 								  <tbody>
 									<tr>
-									  <td>2017/02/03</td>
-									  <td>一般會員</td>
-									  <td>0305@hotmail.com</td>
-									  <td><a href="user_profile.html" data-rel="tooltip" data-original-title="檢視會員">林寧</a></td>
-									  <td>台北市</td>
+									  <td>P-017DHVU</td>
+									  <td>YYYY-MM-DD hh:mm</td>
+									  <td>XYKEGHF</td>
+									  <td>購買課程</td>
+									  <td>+20</td>
 									  <td></td>
-									  <td>無</td>
-									  <td>無</td>
-									  <td></td>
-									  <td><a href="user_profile.html" data-rel="tooltip" data-original-title="檢視檔案">會員檔案</a></td>
+									  <td>訂單編號:O-kuei789</td>
 									</tr>
 									<tr>
-									  <td>2016/11/02</td>
-									  <td>學生會員</td>
-									  <td>0809@hotmail.com</td>
-									  <td><a href="user_profile.html" data-rel="tooltip" data-original-title="檢視會員">王大偉</a></td>
-									  <td>台北市</td>
-									  <td>大安區</td>
-									  <td>金華國中</td>
-									  <td>A22327854</td>
-									  <td>2016/11/30</td>
-									  <td><a href="user_profile.html" data-rel="tooltip" data-original-title="檢視檔案">會員檔案</a></td>
+									  <td>P-017BHVU</td>
+									  <td>YYYY-MM-DD hh:mm</td>
+									  <td>XYKEGHF</td>
+									  <td>購買課程</td>
+									  <td></td>
+									  <td>-2</td>
+									  <td>訂單編號:O-kuei787</td>
+									</tr>
+									<tr>
+									  <td>P-017BHVC</td>
+									  <td>YYYY-MM-DD hh:mm</td>
+									  <td>XYKEGHF</td>
+									  <td>訂單取消</td>
+									  <td></td>
+									  <td></td>
+									  <td>訂單編號:O-kuei787</td>
+									</tr>
+									<tr>
+									  <td>P-017BHVU</td>
+									  <td>YYYY-MM-DD hh:mm</td>
+									  <td>XYKEGHF</td>
+									  <td>推薦會員</td>
+									  <td>+1</td>
+									  <td></td>
+									  <td>被推薦會員姓名(ID)<br/>ex 林寧(XXXXXXXXXX)</td>
+									</tr>
+									<tr>
+									  <td>P-017AHVX</td>
+									  <td>YYYY-MM-DD hh:mm</td>
+									  <td>XYKEGHF</td>
+									  <td>推薦課程</td>
+									  <td>+1</td>
+									  <td></td>
+									  <td>訂單編號:O-kuei787<br/>課程名稱:怎样做好自我管理之健康管理</td>
 									</tr>
 								  </tbody>
 								</table>
 
 								<div class="row">
 								  <div class="col-sm-6">
-									<div class="dataTables_info">共 1 筆資料，目前在第 1 頁。</div>
+									<div class="dataTables_info">共 5 筆資料，目前在第 1 頁。</div>
 								  </div>
 								  <div class="col-sm-6">
 									<div class="dataTables_paginate paging_bootstrap">
@@ -192,6 +160,32 @@
 								</div>
 
 								<div class="hr hr8 hr-double hr-dotted"></div>
+
+								<div id="modal-form" class="modal fade in" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="red"><i class="fa fa-lightbulb-o"></i> 取消設定</h4>
+											</div>
+
+											<div class="modal-body form-horizontal overflow-visible">
+												<input type="text" class="form-control" placeholder="Textbox">
+											</div>
+
+											<div class="modal-footer center">
+												<button class="pushy-btn btn-sm btn--grey" data-dismiss="modal">
+													<i class="icon-times"></i>
+													關 閉
+												</button>
+												<button class="pushy-btn btn-sm btn--red">
+													<i class="fa fa-pencil"></i>
+													確 認
+												</button>
+											</div>
+										</div>
+									</div>
+								</div><!-- /#modal-form -->
 
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
@@ -224,28 +218,21 @@
 		<script src="assets/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
-		<!-- <script src="assets/js/Chart.min.js"></script> -->
 		<script src="assets/js/bootbox.min.js"></script>
-		<!-- <link href="assets/css/animate.css" rel="stylesheet"/> -->
 		<!--[if lte IE 8]><script src="assets/js/excanvas.min.js"></script><![endif]-->
 
 		<!-- ace scripts -->
 		<script src="assets/js/ace-elements.min.js"></script>
 		<script src="assets/js/ace.min.js"></script>
-		<!-- <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script> -->
-		<!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
-			$(document).ready(function() {
-				setTimeout(function(){
-					$(".nav-list").children('li:nth-child(3)').addClass("active");
-					$(".nav-list .active ul").children('li:nth-child(1)').addClass("active");
-				},300); 
-			});
-
-			$('[data-rel=tooltip]').tooltip();
+		$(document).ready(function() {
+			setTimeout(function(){
+				$(".nav-list").children('li:nth-child(12)').addClass("active");
+				//$(".nav-list .active ul").children('li:nth-child(1)').addClass("active");
+			},300); 
+		});
 		</script>
-
 	</body>
 </html>

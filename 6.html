@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>首頁 - 後台管理系統</title>
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">try{ace.settings.check('navbar' , 'fixed')}catch(e){}</script>
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand"></a><!-- /.indexLogo -->
+				</div><!-- /.navbar-header -->
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav"></ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">try{ace.settings.check('main-container' , 'fixed')}catch(e){}</script>
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#"><span class="menu-text"></span></a>
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'fixed')}catch(e){}</script>
+					<ul class="nav nav-list"></ul><!-- /.nav-list -->
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}</script>
+						<ul class="breadcrumb">
+							<li class="active">
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">會員管理</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<!-- <div class="page-header">
+							<h1>首頁<small><i class="icon-angle-double-right"></i>系統狀態</small></h1>
+						</div> --><!-- /.page-header -->
+
+						<!-- <div class="text-right top_toolbar">
+							<a class="btn btn-white" href="#modal-form" data-rel="tooltip" data-original-title="付款設定" data-toggle="modal"><i class="fa fa-cog"></i> 付款設定</a>
+							<a href="#0" class="pushy-btn btn-sm btn--red">
+								<i class="icon-plus align-top bigger-125"></i>
+								新增團購
+							</a>
+						</div> -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<div class="form-group">
+									<div class="input-group">
+										<select>
+											<option value="">帳號狀態</option>
+											<option value="">Stust1</option>
+											<option value="">Stust2</option>
+											<option value="">Stust3</option>
+										</select>
+										&nbsp;
+										<input type="text" class="search-query input-xlarge" placeholder="搜尋ID 姓名 手機號">
+										&nbsp;
+										<button type="button" class="btn btn-purple btn-xs">
+											查詢
+											<i class="icon-search icon-on-right bigger-110"></i>
+										</button>
+									</div>
+								</div>
+
+								<table class="table table-striped table-bordered table-hover width_auto">
+								  <thead>
+									<tr>
+									  <th>帳號狀態</th>
+									  <th>學員ID</th>
+									  <th>學員姓名</th>
+									  <th>性 別</th>
+									  <th>機 構</th>
+									  <th>職 稱</th>
+									  <th>手 機</th>
+									  <th>郵 箱</th>
+									  <th>微 信id</th>
+									  <th>推薦會員ID</th>
+									  <th>推薦通路ID</th>
+									  <th>操 作</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td>正常</td>
+									  <td></td>
+									  <td>林寧</td>
+									  <td>女</td>
+									  <td>JYT</td>
+									  <td>經理</td>
+									  <td>+886 136285792566</td>
+									  <td>123456@hotmail.com</td>
+									  <td>123456ning</td>
+									  <td></td>
+									  <td></td>
+									  <td>
+										<button class="btn btn-xs btn-white" href="#0"><i class="fa fa-ban"></i> 停權</button>
+									  </td>
+									</tr>
+									<tr>
+									  <td>停權</td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td></td>
+									  <td>
+										<button class="btn btn-xs btn-white" href="#0"><i class="fa fa-check"></i> 啟用</button>
+									  </td>
+									</tr>
+								  </tbody>
+								</table>
+
+								<div class="row">
+								  <div class="col-sm-6">
+									<div class="dataTables_info">共 2 筆資料，目前在第 1 頁。</div>
+								  </div>
+								  <div class="col-sm-6">
+									<div class="dataTables_paginate paging_bootstrap">
+									  <ul class="pagination">
+										<li class="prev disabled"><a href="#"><i class="icon-angle-double-left"></i></a></li>
+										<li class="active"><a href="#">1</a></li>
+										<li class="next"><a href="#"><i class="icon-angle-double-right"></i></a></li>
+									  </ul>
+									</div>
+								  </div>
+								</div>
+
+								<div class="hr hr8 hr-double hr-dotted"></div>
+
+								<ul class="breadcrumb">
+									<li>
+										<i class="icon-home home-icon"></i>
+										<a href="index.html">Home</a>
+									</li>
+									<li>
+										<a href="#0">會員管理</a>
+									</li>
+									<li class="active">會員檔案</li>
+								</ul><!-- .breadcrumb -->
+								<hr>
+								<div class="media">
+									<div class="media-left">
+										<a href="#0">
+											<img class="media-object" src="assets/avatars/who.png">
+										</a>
+									</div>
+									<div class="media-body">
+										<h4 class="media-heading">姓名 ‧ <small class="text-muted">性別 - (X歲)</small></h4>
+										<p>所屬機構 ‧ 職稱</p>
+									</div>
+								</div>
+								<div class="space-8"></div>
+
+								<ul class="nav nav-tabs">
+									<li class="active">
+										<a data-toggle="tab" href="#tab1">個人資料</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab2">課程訂單</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab3">作業紀錄</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab4">授權團購</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab5">積分</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab6">代幣</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab7">上線紀錄</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab8">上課紀錄</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab9">瀏覽紀錄</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab10">感興趣課程</a>
+									</li>
+								</ul>
+								<article class="tab-content">
+									<section id="tab1" class="tab-pane active fade in">
+
+										<article class="profile-user-info profile-user-info-striped">
+											<section class="profile-info-row">
+												<div class="profile-info-name">學員id</div>
+												<div class="profile-info-value">
+													<span id="username">&nbsp;</span>
+												</div>
+											</section>
+
+											<section class="profile-info-row">
+												<div class="profile-info-name">姓 名</div>
+												<div class="profile-info-value">
+													<span id="">&nbsp;</span>
+												</div>
+											</section>
+
+											<section class="profile-info-row">
+												<div class="profile-info-name">性 別</div>
+												<div class="profile-info-value">
+													<span id="">&nbsp;</span>
+												</div>
+											</section>
+
+											<section class="profile-info-row">
+												<div class="profile-info-name">手 機</div>
+												<div class="profile-info-value">
+													<span id="">13621548795</span>
+												</div>
+											</section>
+
+											<section class="profile-info-row">
+												<div class="profile-info-name">郵 箱</div>
+												<div class="profile-info-value">
+													<span id=""><a href="mailto:ninglin@jyt-inc.com"><i class="fa fa-envelope"></i> ninglin@jyt-inc.com</a></span>
+												</div>
+											</section>
+
+											<section class="profile-info-row">
+												<div class="profile-info-name">微信id</div>
+												<div class="profile-info-value">
+													<span id="">&nbsp;</span>
+												</div>
+											</section>
+
+											<section class="profile-info-row">
+												<div class="profile-info-name">機 構</div>
+												<div class="profile-info-value">
+													<span id="">資訊</span>
+												</div>
+											</section>
+
+											<section class="profile-info-row">
+												<div class="profile-info-name">職 稱</div>
+												<div class="profile-info-value">
+													<span id="about">&nbsp;</span>
+												</div>
+											</section>
+										</article>
+
+									</section>
+									<section id="tab2" class="tab-pane fade">
+										<div class="form-group">
+											<div class="input-group">
+												<input type="text" class="search-query input-xlarge" placeholder="搜尋課程名稱 訂單編號 講員">
+												&nbsp;
+												<select>
+													<option value="">課程性質</option>
+													<option value="">Stust1</option>
+													<option value="">Stust2</option>
+													<option value="">Stust3</option>
+												</select>
+												&nbsp;
+												<select>
+													<option value="">排序選擇</option>
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+												&nbsp;
+												<button type="button" class="btn btn-purple btn-xs">
+													查詢
+													<i class="icon-search icon-on-right bigger-110"></i>
+												</button>
+											</div>
+										</div>
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>訂單日期</th>
+											  <th>訂單編號</th>
+											  <th>性 質</th>
+											  <th>訂購人姓名</th>
+											  <th>產品ID</th>
+											  <th>產品名稱</th>
+											  <th>到期日</th>
+											  <th>促銷ID</th>
+											  <th>通路ID</th>
+											  <th>價格類型</th>
+											  <th>總 價</th>
+											  <th>現 金</th>
+											  <th>積 分</th>
+											  <th>代 幣</th>
+											  <th>電子支付</th>
+											  <th>備 註</th>
+											  <th>操 作</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>YYYY-MM-DD</td>
+											  <td>O-kuei789</td>
+											  <td>套餐</td>
+											  <td><a href="#0">會員姓名</a></td>
+											  <td>課程ID</td>
+											  <td><a href="#0">課程AAA</a></td>
+											  <td><span class="green">YYYY-MM-DD</span></td>
+											  <td>S-017D025</td>
+											  <td>X001</td>
+											  <td>定價</td>
+											  <td>49.00元</td>
+											  <td>20.00</td>
+											  <td>5.00</td>
+											  <td>24.00</td>
+											  <td>微信</td>
+											  <td>
+												<p>商户订单号XXXXXXX</p>
+												<p>積分單號:P-017DHVU</p>
+												<p>代幣單號:T-017AHUW</p>
+											  </td>
+											  <td>
+												<button class="btn btn-xs btn-white" href="#0">取消</button>
+											  </td>
+											</tr>
+											<tr>
+											  <td>YYYY-MM-DD</td>
+											  <td>O-kuei787</td>
+											  <td>單堂</td>
+											  <td><a href="#0">會員姓名</a></td>
+											  <td>套餐ID</td>
+											  <td><a href="#0">課程AAA</a></td>
+											  <td>YYYY-MM-DD</td>
+											  <td>S-017D023</td>
+											  <td>X001</td>
+											  <td>定價</td>
+											  <td>3萬元</td>
+											  <td>19.00</td>
+											  <td>0</td>
+											  <td>0</td>
+											  <td>微信</td>
+											  <td>
+												<p>商户订单号XXXXXXX</p>
+											  </td>
+											  <td>
+												<button class="btn btn-xs btn-white" href="#0">取消</button>
+											  </td>
+											</tr>
+										  </tbody>
+										</table>
+									</section>
+									<section id="tab3" class="tab-pane fade">
+										<div class="form-group">
+											<div class="input-group">
+												<input type="text" class="search-query input-xlarge" placeholder="搜尋課程名稱  訂單編號 講員">
+												&nbsp;
+												<button type="button" class="btn btn-purple btn-xs">
+													查詢
+													<i class="icon-search icon-on-right bigger-110"></i>
+												</button>
+											</div>
+										</div>
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>課程名稱</th>
+											  <th>作業類型</th>
+											  <th>作業題目</th>
+											  <th>繳交時間</th>
+											  <th>文檔名稱</th>
+											  <th>文檔轉檔</th>
+											  <th>操 作</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>課程AAA</td>
+											  <td>報告</td>
+											  <td>00000</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>檔案名稱.docx</td>
+											  <td>完成</td>
+											  <td>
+												<button class="btn btn-xs btn-white" href="#0">檢視</button>
+												<button class="btn btn-xs btn-white" href="#0">批改</button>
+											  </td>
+											</tr>
+											<tr>
+											  <td>課程BBB</td>
+											  <td>問答</td>
+											  <td>00000</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>無</td>
+											  <td>無</td>
+											  <td>
+												<button class="btn btn-xs btn-white" href="#0">檢視</button>
+												<button class="btn btn-xs btn-white" href="#0">批改</button>
+											  </td>
+											</tr>
+											<tr>
+											  <td>課程CCC</td>
+											  <td>報告</td>
+											  <td>00000</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>檔案名稱.pdf</td>
+											  <td>完成</td>
+											  <td>
+												<button class="btn btn-xs btn-white" href="#0">檢視</button>
+												<button class="btn btn-xs btn-white" href="#0">批改</button>
+											  </td>
+											</tr>
+										  </tbody>
+										</table>
+									</section>
+									<section id="tab4" class="tab-pane fade">
+										<div class="form-group">
+											<div class="input-group">
+												<select>
+													<option value="">課程狀態</option>
+													<option value="">Stust1</option>
+													<option value="">Stust2</option>
+													<option value="">Stust3</option>
+												</select>
+												&nbsp;
+												<input type="text" class="search-query input-xlarge" placeholder="團購ID  團購名稱  訂單編號 講員">
+												<!-- &nbsp;
+												<button type="button" class="btn btn-purple btn-xs">
+													查詢
+													<i class="icon-search icon-on-right bigger-110"></i>
+												</button> -->
+											</div>
+										</div>
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>團購狀態</th>
+											  <th>團購ID</th>
+											  <th>企業用戶名稱</th>
+											  <th>團購名稱</th>
+											  <th>開課日</th>
+											  <th>到期日</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>上架</td>
+											  <td>G00002</td>
+											  <td>第一金控</td>
+											  <td>團購DDD</td>
+											  <td><span class="green">YYYY-MM-DD</span></td>
+											  <td>YYYY-MM-DD</td>
+											</tr>
+											<tr>
+											  <td>刪除</td>
+											  <td>G00001</td>
+											  <td>第一金控</td>
+											  <td>團購CCC</td>
+											  <td>YYYY-MM-DD</td>
+											  <td>YYYY-MM-DD</td>
+											</tr>
+										  </tbody>
+										</table>
+									</section>
+									<section id="tab5" class="tab-pane fade">
+										<div class="form-group">
+											<div class="input-group">
+												<select>
+													<option value="">交易原因</option>
+													<option value="">Stust1</option>
+													<option value="">Stust2</option>
+													<option value="">Stust3</option>
+												</select>
+												&nbsp;
+												<button type="button" class="btn btn-purple btn-xs">
+													查詢
+													<i class="icon-search icon-on-right bigger-110"></i>
+												</button>
+											</div>
+										</div>
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>積分單號</th>
+											  <th>交易日期</th>
+											  <th>交易原因</th>
+											  <th>獲贈積分</th>
+											  <th>支出積分</th>
+											  <th>備 註</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>P-017DHVU</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>購買課程</td>
+											  <td>+20</td>
+											  <td></td>
+											  <td>訂單編號:O-kuei789</td>
+											</tr>
+											<tr>
+											  <td>P-017BHVU</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>購買課程</td>
+											  <td></td>
+											  <td>-2</td>
+											  <td>訂單編號:O-kuei787</td>
+											</tr>
+											<tr>
+											  <td>P-017BHVU</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>推薦會員</td>
+											  <td>+1</td>
+											  <td></td>
+											  <td>被推薦會員姓名(ID)<br/>ex 林寧(XXXXXXXXXX)</td>
+											</tr>
+											<tr>
+											  <td>P-017AHVX</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>推薦課程</td>
+											  <td>+1</td>
+											  <td></td>
+											  <td>訂單編號:O-kuei787<br/>課程名稱:怎样做好自我管理之健康管理</td>
+											</tr>
+											<tr>
+											  <td>P-017AHVX</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>轉換代幣</td>
+											  <td></td>
+											  <td>+20</td>
+											  <td>代幣單號:T-017BHVU</td>
+											</tr>
+										  </tbody>
+										</table>
+									</section>
+									<section id="tab6" class="tab-pane fade">
+										<div class="form-group">
+											<div class="input-group">
+												<select>
+													<option value="">交易原因</option>
+													<option value="">Stust1</option>
+													<option value="">Stust2</option>
+													<option value="">Stust3</option>
+												</select>
+												&nbsp;
+												<button type="button" class="btn btn-purple btn-xs">
+													查詢
+													<i class="icon-search icon-on-right bigger-110"></i>
+												</button>
+											</div>
+										</div>
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>代幣單號</th>
+											  <th>交易日期</th>
+											  <th>交易原因</th>
+											  <th>儲值金</th>
+											  <th>消費金</th>
+											  <th>備 註</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>T-017BHVU</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>課程卡儲值</td>
+											  <td>+50</td>
+											  <td></td>
+											  <td>課程卡號:XTNIGX</td>
+											</tr>
+											<tr>
+											  <td>T-017AHVX</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>積分轉換</td>
+											  <td>+10</td>
+											  <td></td>
+											  <td>積分單號:P-UKHVU</td>
+											</tr>
+											<tr>
+											  <td>T-017AHUW</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>課程購買</td>
+											  <td></td>
+											  <td>-15</td>
+											  <td>訂單編號:O-kuei789</td>
+											</tr>
+										  </tbody>
+										</table>
+									</section>
+									<section id="tab7" class="tab-pane fade">
+										<p><i class="fa fa-clock-o grey"></i> 日均上線時間：180m <span class="text-muted">-</span> 單次上限平均時間：20m</p>
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>登入時間</th>
+											  <th>離開時間</th>
+											  <th>線上時間</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>hh:mm</td>
+											</tr>
+										  </tbody>
+										</table>
+									</section>
+									<section id="tab8" class="tab-pane fade">
+										<p><i class="fa fa-clock-o grey"></i> 日均上課時間：180m <span class="text-muted">-</span> 單次上課平均時間：15m</p>
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>登入日期</th>
+											  <th>登入時間</th>
+											  <th>課程ID</th>
+											  <th>課程屬性</th>
+											  <th>觀賞總時間</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>YYYY-MM-DD</td>
+											  <td>hh:mm</td>
+											  <td>SIEJB</td>
+											  <td>單堂</td>
+											  <td>hh:mm</td>
+											</tr>
+											<tr>
+											  <td>YYYY-MM-DD</td>
+											  <td>hh:mm</td>
+											  <td>SIEJB</td>
+											  <td>套餐</td>
+											  <td>hh:mm</td>
+											</tr>
+										  </tbody>
+										</table>
+									</section>
+									<section id="tab9" class="tab-pane fade">
+										<p><i class="fa fa-globe grey"></i> 日均瀏覽頁數：xx</p>
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>登入日期</th>
+											  <th>造訪時間</th>
+											  <th>網頁類型</th>
+											  <th>網頁名稱</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>YYYY-MM-DD</td>
+											  <td>hh:mm</td>
+											  <td>課程列表</td>
+											  <td></td>
+											</tr>
+											<tr>
+											  <td>YYYY-MM-DD</td>
+											  <td>hh:mm</td>
+											  <td>課程簡介</td>
+											  <td></td>
+											</tr>
+										  </tbody>
+										</table>
+									</section>
+									<section id="tab10" class="tab-pane fade">
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>課程ID</th>
+											  <th>課程屬性</th>
+											  <th>課程名稱</th>
+											  <th>瀏覽總次數</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>SIEJB</td>
+											  <td>單堂</td>
+											  <td>XXXXXXXXXX</td>
+											  <td>2</td>
+											</tr>
+											<tr>
+											  <td>SIEJB</td>
+											  <td>套餐</td>
+											  <td>XXXXXXXXXX</td>
+											  <td>3</td>
+											</tr>
+										  </tbody>
+										</table>
+									</section>
+								</article>
+
+								<div class="hr hr8 hr-double hr-dotted"></div>
+
+								<div id="modal-form" class="modal fade in" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="red"><i class="icon-file-o bigger-130"></i>Title</h4>
+											</div>
+
+											<div class="modal-body form-horizontal overflow-visible">
+												<div class="row">
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right">text</label>
+														<div class="col-sm-7">
+															<label class="radio-inline">
+															<input type="radio" name="Radio1" id="inlineRadio1" value="option1"> Radio1
+															</label>
+															<label class="radio-inline">
+															<input type="radio" name="Radio1" id="inlineRadio2" value="option2"> Radio2
+															</label>
+															<label class="radio-inline">
+															<input type="radio" name="Radio1" id="inlineRadio3" value="option3"> Radio3
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right">text</label>
+														<div class="col-sm-7">
+															<label class="radio-inline">
+															<input type="radio" name="Radio2" id="inlineRadio4" value="option1"> Radio1
+															</label>
+															<label class="radio-inline">
+															<input type="radio" name="Radio2" id="inlineRadio5" value="option2"> Radio2
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right">Areatext</label>
+														<div class="col-sm-7">
+															<textarea class="form-control" placeholder="text..."></textarea>
+														</div>
+													</div>
+
+													<hr/>
+
+												</div><!-- /.row -->
+											</div>
+
+											<div class="modal-footer center">
+												<button class="pushy-btn btn-sm btn--grey" data-dismiss="modal">
+													<i class="icon-times"></i>
+													取 消
+												</button>
+												<button class="pushy-btn btn-sm btn--red">
+													<i class="icon-check"></i>
+													確 認
+												</button>
+											</div>
+										</div>
+									</div>
+								</div><!-- /#modal-form -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"><i class="icon-angle-double-up icon-only bigger-110"></i></a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+		<!--[if !IE]> -->
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");</script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");</script>
+		<![endif]-->
+
+		<script type="text/javascript">if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/bootbox.min.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/excanvas.min.js"></script><![endif]-->
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			setTimeout(function(){
+				$(".nav-list").children('li:nth-child(7)').addClass("active");
+				//$(".nav-list .active ul").children('li:nth-child(1)').addClass("active");
+			},300); 
+		});
+		</script>
+	</body>
+</html>

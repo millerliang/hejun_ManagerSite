@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>首頁 - 後台管理系統</title>
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">try{ace.settings.check('navbar' , 'fixed')}catch(e){}</script>
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand"></a><!-- /.indexLogo -->
+				</div><!-- /.navbar-header -->
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav"></ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">try{ace.settings.check('main-container' , 'fixed')}catch(e){}</script>
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#"><span class="menu-text"></span></a>
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'fixed')}catch(e){}</script>
+					<ul class="nav nav-list"></ul><!-- /.nav-list -->
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}</script>
+						<ul class="breadcrumb">
+							<li class="active">
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">課程卡管理</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<!-- <div class="page-header">
+							<h1>首頁<small><i class="icon-angle-double-right"></i>系統狀態</small></h1>
+						</div> --><!-- /.page-header -->
+
+						<div class="text-right top_toolbar">
+							<a class="pushy-btn btn-sm btn--red" href="#modal-form" data-toggle="modal">
+								生成課程卡
+							</a>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<ul class="nav nav-tabs">
+									<li class="active">
+										<a data-toggle="tab" href="#tab1">生成紀錄</a>
+									</li>
+									<li>
+										<a data-toggle="tab" href="#tab2">兌換紀錄</a>
+									</li>
+									</li>
+								</ul>
+								<article class="tab-content">
+
+									<section id="tab1" class="tab-pane active fade in">
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>製作日期</th>
+											  <th>製作數量</th>
+											  <th>面 額</th>
+											  <th>生成者</th>
+											  <th>最近下載者</th>
+											  <th>操 作</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>YYYY-MM-DD</td>
+											  <td>13</td>
+											  <td>+10</td>
+											  <td>管理員002</td>
+											  <td>管理員002</td>
+											  <td>
+												<button class="btn btn-xs btn-white btn-primary" href="#modal-form" data-rel="tooltip" data-original-title="下載代號" data-toggle="modal">下載代號</button>
+											  </td>
+											</tr>
+											<tr>
+											  <td>YYYY-MM-DD</td>
+											  <td>15</td>
+											  <td>+50</td>
+											  <td>管理員001</td>
+											  <td>管理員003</td>
+											  <td>
+												<button class="btn btn-xs btn-white btn-primary" href="#modal-form" data-rel="tooltip" data-original-title="下載代號" data-toggle="modal">下載代號</button>
+											  </td>
+											</tr>
+										  </tbody>
+										</table>
+
+										<div class="row">
+										  <div class="col-sm-6">
+											<div class="dataTables_info">共 2 筆資料，目前在第 1 頁。</div>
+										  </div>
+										  <div class="col-sm-6">
+											<div class="dataTables_paginate paging_bootstrap">
+											  <ul class="pagination">
+												<li class="prev disabled"><a href="#"><i class="icon-angle-double-left"></i></a></li>
+												<li class="active"><a href="#">1</a></li>
+												<li class="next"><a href="#"><i class="icon-angle-double-right"></i></a></li>
+											  </ul>
+											</div>
+										  </div>
+										</div>
+
+									</section>
+									
+									<section id="tab2" class="tab-pane fade">
+
+										<table class="table table-striped table-bordered table-hover width_auto">
+										  <thead>
+											<tr>
+											  <th>課程卡號碼</th>
+											  <th>兌換會員ID</th>
+											  <th>面額</th>
+											  <th>交易日期</th>
+											  <th>交易單據</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <td>WJUS17BHVU</td>
+											  <td>XYKEGHF</td>
+											  <td>+50</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>代幣單號:T-017BHVU</td>
+											</tr>
+											<tr>
+											  <td>WJUS17BHVU</td>
+											  <td>XYKEGHF</td>
+											  <td>+10</td>
+											  <td>YYYY-MM-DD hh:mm</td>
+											  <td>代幣單號:T-017BHVE</td>
+											</tr>
+										  </tbody>
+										</table>
+
+									</section>
+								</article>
+
+								<div class="hr hr8 hr-double hr-dotted"></div>
+
+								<div id="modal-form" class="modal fade in" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="red"><i class="fa fa-lightbulb-o"></i> Panel</h4>
+											</div>
+
+											<div class="modal-body form-horizontal overflow-visible">
+												<article class="form-horizontal">
+													<section class="form-group">
+														<label class="col-sm-3 control-label text-right">生成數量</label>
+														<div class="col-sm-7">
+															<input type="text" class="form-control" value="15">
+														</div>
+													</section>
+													<section class="form-group">
+														<label class="col-sm-3 control-label text-right">面額</label>
+														<div class="col-sm-7">
+															<input type="text" class="form-control" value="50">
+														</div>
+													</section>
+												</article>
+											</div>
+
+											<div class="modal-footer center">
+												<button class="pushy-btn btn-sm btn--grey" data-dismiss="modal">
+													<i class="icon-times"></i>
+													取 消
+												</button>
+												<button class="pushy-btn btn-sm btn--red">
+													<i class="fa fa-pencil"></i>
+													確 認
+												</button>
+											</div>
+										</div>
+									</div>
+								</div><!-- /#modal-form -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"><i class="icon-angle-double-up icon-only bigger-110"></i></a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+		<!--[if !IE]> -->
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");</script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");</script>
+		<![endif]-->
+
+		<script type="text/javascript">if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/bootbox.min.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/excanvas.min.js"></script><![endif]-->
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			setTimeout(function(){
+				$(".nav-list").children('li:nth-child(14)').addClass("active");
+				//$(".nav-list .active ul").children('li:nth-child(1)').addClass("active");
+			},300); 
+		});
+		</script>
+	</body>
+</html>
