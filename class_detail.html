@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>各班檔案 - 後台管理系統</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- basic styles -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">try{ace.settings.check('navbar' , 'fixed')}catch(e){}</script>
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand"></a><!-- /.indexLogo -->
+				</div><!-- /.navbar-header -->
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav"></ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">try{ace.settings.check('main-container' , 'fixed')}catch(e){}</script>
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#"><span class="menu-text"></span></a>
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'fixed')}catch(e){}</script>
+					<ul class="nav nav-list"></ul><!-- /.nav-list -->
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}</script>
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="class_manager.html">學校管理</a>
+							</li>
+							<li><a href="class_manager2.html">班級管理</a></li>
+							<li class="active">班級檔案</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<!-- <div class="page-header">
+							<h1>首頁<small><i class="icon-angle-double-right"></i>系統狀態</small></h1>
+						</div> --><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<h4 class="header blue"><i class="fa fa-address-book-o"></i> 金華國中 109班 105年</h4>
+								
+								<style>.nav-tabs>li.active>a{font-size: medium;color:#4c8fbd!important;}</style>
+								<div class="tabbable">
+									<ul class="nav nav-tabs">
+										<li class="active">
+											<a data-toggle="tab" href="#tab1">週報表</a>
+										</li>
+										<li>
+											<a data-toggle="tab" href="#tab2">儲蓄達成率</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+
+										<div class="form-group">
+											<div class="input-group">
+												<input type="text" class="search-query input-large" name="date-range-picker" placeholder="儲蓄期間">
+												&nbsp;
+												<button type="button" class="btn btn-white">
+													<i class="fa fa-angle-left bigger-110"></i>
+													上一期
+												</button>&nbsp;
+												<button type="button" class="btn btn-white">
+													下一期
+													<i class="fa fa-angle-right bigger-110"></i>
+												</button>
+												&nbsp;
+												<button type="button" class="btn btn-purple btn-xs">
+													<i class="icon-cloud-upload bigger-110"></i>
+													匯出excel檔
+												</button>
+												&nbsp;
+												<span>檔名：金華國中_109班_105年儲蓄達成率20161114.xlsx</span>
+											</div>
+										</div>
+
+										<div id="tab1" class="tab-pane active fadeIn animated">
+
+											<table class="table table-bordered table-expandable table-hover">
+												<thead>
+													<tr>
+														<th>學 號</th>
+														<th>姓 名</th>
+														<th>周金幣</th>
+														<th>周收入</th>
+														<th>周儲蓄</th>
+														<th>周支出</th>
+														<th>周捐贈</th>
+														<th>周結餘</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td>A22327854</td>
+														<td><a href="user_profile.html" data-rel="tooltip" data-original-title="檢視會員">王大偉</a></td>
+														<td>10</td>
+														<td>400</td>
+														<td>40</td>
+														<td>400</td>
+														<td>80</td>
+														<td><span  class="red">-200</span></td>
+													</tr>
+													<tr>
+														<td>A22327853</td>
+														<td><a href="user_profile.html" data-rel="tooltip" data-original-title="檢視會員">林小花</a></td>
+														<td>10</td>
+														<td>200</td>
+														<td>20</td>
+														<td>160</td>
+														<td>20</td>
+														<td>0</td>
+													</tr>
+												</tbody>
+											</table>
+
+										</div><!-- /#tab1 -->
+										
+										<div id="tab2" class="tab-pane fadeIn animated">
+											<table class="table table-bordered table-expandable table-hover">
+												<thead>
+													<tr>
+														<th>學 號</th>
+														<th>姓 名</th>
+														<th>W1</th>
+														<th>W2</th>
+														<th>W3</th>
+														<th>W4</th>
+														<th>目標額</th>
+														<th>儲蓄額</th>
+														<th>達成率</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td>A22327854</td>
+														<td><a href="user_profile.html" data-rel="tooltip" data-original-title="檢視會員">王大偉</a></td>
+														<td>40</td>
+														<td>20</td>
+														<td>40</td>
+														<td></td>
+														<td>200</td>
+														<td>100</td>
+														<td><span  class="blue">50%</span></td>
+													</tr>
+													<tr>
+														<td>A22327853</td>
+														<td><a href="user_profile.html" data-rel="tooltip" data-original-title="檢視會員">林小花</a></td>
+														<td>10</td>
+														<td>25</td>
+														<td>25</td>
+														<td>20</td>
+														<td>150</td>
+														<td>75</td>
+														<td><span  class="green">50%</span></td>
+													</tr>
+												</tbody>
+											</table>
+										</div><!-- /#tab2 -->
+
+									</div><!-- /.tab-content -->
+								</div><!-- /.tabbable -->
+
+								<div class="hr hr8 hr-double hr-dotted"></div>
+
+								<div class="row">
+								  <div class="col-sm-6">
+									<div class="dataTables_info">共 2 筆資料，目前在第 1 頁。</div>
+								  </div>
+								  <div class="col-sm-6">
+									<div class="dataTables_paginate paging_bootstrap">
+									  <ul class="pagination">
+										<li class="prev disabled"><a href="#"><i class="icon-angle-double-left"></i></a></li>
+										<li class="active"><a href="#">1</a></li>
+										<li class="next"><a href="#"><i class="icon-angle-double-right"></i></a></li>
+									  </ul>
+									</div>
+								  </div>
+								</div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"><i class="icon-angle-double-up icon-only bigger-110"></i></a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+		<!--[if !IE]> -->
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");</script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");</script>
+		<![endif]-->
+
+		<script type="text/javascript">if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<!-- <script src="assets/js/Chart.min.js"></script> -->
+		<script src="assets/js/bootbox.min.js"></script>
+		<!-- <link href="assets/css/animate.css" rel="stylesheet"/> -->
+		<!--[if lte IE 8]><script src="assets/js/excanvas.min.js"></script><![endif]-->
+		<!-- page specific plugin styles -->
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="assets/js/date-time/moment.min.js"></script>
+		<script src="assets/js/date-time/daterangepicker.min.js"></script>
+		<link rel="stylesheet" href="assets/css/daterangepicker.css" />
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+		<!-- <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script> -->
+		<!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				setTimeout(function(){
+					$(".nav-list").children('li:nth-child(4)').addClass("active");
+					$(".nav-list .active ul").children('li:nth-child(1)').addClass("active");
+				},300); 
+			});
+
+			$('[data-rel=tooltip]').tooltip();
+			
+			// DatePicker Dialog 日期區間選擇 ///
+			$('input[name=date-range-picker]').daterangepicker().prev().on(ace.click_event, function(){
+				$(this).next().focus();
+			});
+		</script>
+
+	</body>
+</html>

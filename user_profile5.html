@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>會員檔案 - 後台管理系統</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- basic styles -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">try{ace.settings.check('navbar' , 'fixed')}catch(e){}</script>
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand"></a><!-- /.indexLogo -->
+				</div><!-- /.navbar-header -->
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav"></ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">try{ace.settings.check('main-container' , 'fixed')}catch(e){}</script>
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#"><span class="menu-text"></span></a>
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'fixed')}catch(e){}</script>
+					<ul class="nav nav-list"></ul><!-- /.nav-list -->
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}</script>
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li><a href="users_list.html">會員管理</a></li>
+							<li class="active">會員檔案</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<!-- <div class="page-header">
+							<h1>首頁<small><i class="icon-angle-double-right"></i>系統狀態</small></h1>
+						</div> --><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row user_profil_block"></div>
+								<div class="space-10"></div>
+								<table class="table table-striped table-bordered table-hover">
+								  <thead>
+									<tr>
+									  <th>註冊日期</th>
+									  <th>姓 名</th>
+									  <th>地 區</th>
+									  <th>行政區</th>
+									  <th>註冊學校</th>
+									  <th>註冊班級</th>
+									  <th>註冊學年</th>
+									  <th>學 號</th>
+									  <th>前次記錄日期</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td>2016/11/02</td>
+									  <td>王大偉</td>
+									  <td>台北市</td>
+									  <td>大安區</td>
+									  <td>金華國中</td>
+									  <td>109</td>
+									  <td>105</td>
+									  <td>A22327854</td>
+									  <td>2016/11/30</td>
+									</tr>
+								  </tbody>
+								</table>
+								<div class="hr hr16 dotted"></div>
+								<div class="space-30"></div>
+								<div class="top_toolbar">
+									<a href="user_profile.html" class="btn btn-sm btn-default">個人首頁</a>
+									<a href="user_profile1.html" class="btn btn-sm btn-default">收支簿</a>
+									<a href="user_profile2.html" class="btn btn-sm btn-default">儲蓄目標</a>
+									<a href="user_profile3.html" class="btn btn-sm btn-default">儲蓄分析</a>
+									<a href="user_profile4.html" class="btn btn-sm btn-default">3S分析</a>
+									<a href="user_profile5.html" class="btn btn-sm btn-success">類別分析</a>
+									<a href="user_profile6.html" class="btn btn-sm btn-default">個 資</a>
+									<a href="user_profile7.html" class="btn btn-sm btn-default">心 得</a>
+									<a href="user_profile8.html" class="btn btn-sm btn-default">金 幣</a>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="row">
+											<div class="col-sm-6">
+												<table class="table table-bordered">
+													<thead>
+														<tr>
+															<th>本期收入</th>
+															<th>本期支出</th>
+															<th>本期儲蓄</th>
+															<th>本期捐贈</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><span class="bigger-150 green">+500</span></td>
+															<td><span class="bigger-150 red">-400</span></td>
+															<td><span class="bigger-150 red">-50</span></td>
+															<td><span class="bigger-150 green">+50</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<!-- <ul class="list-group">
+													<li class="list-group-item">
+														<label>本期收入</label>&nbsp;
+														<span class="bigger-150 green">+500</span>
+													</li>
+													<li class="list-group-item">
+														<label>本期支出</label>&nbsp;
+														<span class="bigger-150 red">-400</span>
+													</li>
+													<li class="list-group-item">
+														<label>本期儲蓄</label>&nbsp;
+														<span class="bigger-150 red">-50</span>
+													</li>
+													<li class="list-group-item">
+														<label>本期捐贈</label>&nbsp;
+														<span class="bigger-150 green">+50</span>
+													</li>
+												</ul> -->
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12">
+										<nav>
+											<ul class="pager">
+												<li class="previous"><a href="#"><i class="fa fa-angle-left"></i> 上一週</a></li>
+												<li class="sel_date bigger-125">2016/11/07 ~ 2016/11/13</li>
+												<li class="next"><a href="#">下一週 <i class="fa fa-angle-right"></i></a></li>
+											</ul>
+										</nav>
+										<div class="space-10"></div>
+										<ul class="nav nav-tabs nav-justified" role="tablist">
+											<li class="bigger-150"><a href="#aaa" role="tab" data-toggle="tab" aria-expanded="true" style="line-height: 2;">收 入</a></li>
+											<li class="bigger-150 active"><a href="#bbb" role="tab" data-toggle="tab" aria-expanded="false" style="line-height: 2;">支 出</a></li>
+										</ul>
+										<div class="tab-content">
+											<div role="tabpanel" class="tab-pane fade" id="aaa">
+												<div class="space-12"></div>
+												<div class="row">
+													<div class="col-sm-4 col-sm-offset-1" style="margin-bottom:3rem;">
+														<canvas id="myChart1" width="100" height="100"></canvas>
+													</div>
+													<br>
+													<br>
+													<div class="col-sm-5 col-sm-offset-1">
+														<table class="table table-bordered">
+															<thead>
+																<tr>
+																	<th>支出類別</th>
+																	<th>金 額</th>
+																	<th>占 比</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>零用金</td>
+																	<td>$350</td>
+																	<td>50%</td>
+																</tr>
+																<tr>
+																	<td>紅 包</td>
+																	<td>$50</td>
+																	<td>17%</td>
+																</tr>
+																<tr>
+																	<td>獎 勵</td>
+																	<td>$50</td>
+																	<td>20%</td>
+																</tr>
+																<tr>
+																	<td>借 入</td>
+																	<td>$100</td>
+																	<td>10%</td>
+																</tr>
+																<tr>
+																	<td>其 他</td>
+																	<td>$0</td>
+																	<td>3%</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div><!-- /.row -->
+											</div>
+											<div role="tabpanel" class="tab-pane active fade in" id="bbb">
+												<div class="space-12"></div>
+												<div class="row">
+													<div class="col-sm-4 col-sm-offset-1" style="margin-bottom:3rem;">
+														<canvas id="myChart2" width="100" height="100"></canvas>
+													</div>
+													<br>
+													<br>
+													<div class="col-sm-5 col-sm-offset-1">
+														<div class="row">
+															<div class="col-sm-8_">
+																<table class="table table-bordered">
+																	<thead>
+																		<tr>
+																			<th>支出類別</th>
+																			<th>金 額</th>
+																			<th>占 比</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>餐 飲</td>
+																			<td>$100</td>
+																			<td>25%</td>
+																		</tr>
+																		<tr>
+																			<td>服裝儀容</td>
+																			<td>$20</td>
+																			<td>5%</td>
+																		</tr>
+																		<tr>
+																			<td>交通費</td>
+																			<td>$20</td>
+																			<td>5%</td>
+																		</tr>
+																		<tr>
+																			<td>電話網路</td>
+																			<td>$0</td>
+																			<td></td>
+																		</tr>
+																		<tr>
+																			<td>日常用品</td>
+																			<td>$0</td>
+																			<td></td>
+																		</tr>
+																		<tr>
+																			<td>文具雜項</td>
+																			<td>$10</td>
+																			<td></td>
+																		</tr>
+																		<tr>
+																			<td>教育費</td>
+																			<td>$0</td>
+																			<td></td>
+																		</tr>
+																		<tr>
+																			<td>休閒娛樂</td>
+																			<td>$20</td>
+																			<td></td>
+																		</tr>
+																		<tr>
+																			<td>其他支出</td>
+																			<td>$30</td>
+																			<td></td>
+																		</tr>
+																		<tr>
+																			<td>捐 款</td>
+																			<td>$50</td>
+																			<td>12.5%</td>
+																		</tr>
+																		<tr>
+																			<td>儲 蓄</td>
+																			<td>$50</td>
+																			<td>...</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<div class="col-sm-4_">
+																<table class="table table-bordered">
+																	<thead>
+																		<tr>
+																			<th>需 求</th>
+																			<th>金 額</th>
+																			<th>占 比</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>想 要</td>
+																			<td>160</td>
+																			<td>40%</td>
+																		</tr>
+																		<tr>
+																			<td>需 要</td>
+																			<td>240</td>
+																			<td>60%</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div><!-- /.row -->
+													</div><!-- /.col-sm-6 -->
+												</div><!-- /.row -->
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="hr hr8 hr-double hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"><i class="icon-angle-double-up icon-only bigger-110"></i></a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+		<!--[if !IE]> -->
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");</script>
+		<!-- <![endif]-->
+		<!--[if IE]>
+		<script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");</script>
+		<![endif]-->
+
+		<script type="text/javascript">if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<!-- <script src="assets/js/Chart.min.js"></script> -->
+		<script src="assets/js/bootbox.min.js"></script>
+		<script src="assets/js/user_profil_block.js"></script>
+		<!-- <link href="assets/css/animate.css" rel="stylesheet"/> -->
+		<!--[if lte IE 8]><script src="assets/js/excanvas.min.js"></script><![endif]-->
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+		<!-- <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script> -->
+		<!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script>
+		var ctx1 = document.getElementById("myChart1");
+		var ctx2 = document.getElementById("myChart2");
+		var myChart1 = new Chart(ctx1, {
+			type: 'pie',
+			data: {
+				labels: ["零用金", "紅包", "獎勵", "借入", "其他"],
+				datasets: [{
+					label: '# of Votes',
+					data: [50, 17, 20, 10, 3],
+					backgroundColor: [
+						'rgba(54, 162, 235, 0.75)',
+						'rgba(255, 99, 132, 0.75)',
+						'rgba(255, 206, 86, 0.75)',
+						'rgba(75, 192, 192, 0.75)',
+						'rgba(205,205,205,0.75)'
+					],
+					borderColor: [
+						'rgba(54, 162, 235, 1)',
+						'rgba(255,99,132,1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(200,200,200,1)'
+					],
+					borderWidth: 1
+				}]
+			}
+		});
+		var myChart2 = new Chart(ctx2, {
+			type: 'pie',
+			data: {
+				labels: ["紅", "藍", "黃", "綠", "紫"],
+				datasets: [{
+					//label: '# of Votes',
+					data: [12, 19, 3, 5, 2],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.75)',
+						'rgba(54, 162, 235, 0.75)',
+						'rgba(255, 206, 86, 0.75)',
+						'rgba(75, 192, 192, 0.75)',
+						'rgba(153, 102, 255, 0.75)',
+						//'rgba(255, 159, 64, 0.75)'
+					],
+					borderColor: [
+						'rgba(255,99,132,1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(180,120,255,1)',
+						//'rgba(255, 159, 64, 1)'
+					],
+					borderWidth: 1
+				}]
+			}
+		});
+		</script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				setTimeout(function(){
+					$(".nav-list").children('li:nth-child(3)').addClass("active");
+					$(".nav-list .active ul").children('li:nth-child(2)').addClass("active");
+					//$('.tab-content').children('div:first-child').addClass("active");
+				},300); 
+			});
+
+			$('[data-rel=tooltip]').tooltip();
+		</script>
+
+	</body>
+</html>

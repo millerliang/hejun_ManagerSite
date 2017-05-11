@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>訊息通知 - 後台管理系統</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- basic styles -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">try{ace.settings.check('navbar' , 'fixed')}catch(e){}</script>
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand"></a><!-- /.indexLogo -->
+				</div><!-- /.navbar-header -->
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav"></ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">try{ace.settings.check('main-container' , 'fixed')}catch(e){}</script>
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#"><span class="menu-text"></span></a>
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'fixed')}catch(e){}</script>
+					<ul class="nav nav-list"></ul><!-- /.nav-list -->
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+					<script type="text/javascript">try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}</script>
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">訊息通知</li>
+						</ul><!-- .breadcrumb -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+                        <div class="page-header">
+							<h1><span class="menu-text"> 訊息通知</span><!-- <small><i class="icon-angle-double-right"></i>回覆會員反饋問題</small> --></h1>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<form id="search">
+									<!-- <div class="btn-group btn-group-sm">
+										<button type="button" class="btn btn-white">Left</button>
+										<button type="button" class="btn btn-white">Middle</button>
+										<button type="button" class="btn btn-white">Right</button>
+									</div> -->
+
+									<div class="input-group">
+										<select>
+											<option value="0">全 部</option>
+											<option value="1">未回覆意見</option>
+											<option value="2">已回覆意見</option>
+										</select>
+										&nbsp;
+										<select>
+											<option value="0">時間範圍</option>
+											<option value="1week">一週</option>
+											<option value="3week">三週</option>
+											<option value="1mon">一個月</option>
+											<option value="3mon">三個月</option>
+											<option value="6mon">半年</option>
+										</select>
+										&nbsp;
+										<input type="text" class="search-query input-xlarge" placeholder="請在此處輸入關鍵字">
+										&nbsp;
+										<button type="button" class="btn btn-purple btn-xs">
+											送出搜尋
+											<i class="icon-search icon-on-right bigger-110"></i>
+										</button>
+										<!-- &nbsp;
+										<button type="button" class="btn btn-xs">
+											回復預設
+											<i class="icon-refresh icon-on-right bigger-110"></i>
+										</button> -->
+
+									</div>
+
+								</form><!-- /form -->
+								
+								<div class="hr hr-dotted hr16"></div>
+
+								<!-- <h4 class="blue"><i class="icon-comments-o"></i> 訊息列表</h4> -->
+
+								<div class="top_toolbar">
+									<button type="button" class="btn btn-danger btn-xs">
+										刪 除
+										<i class="icon-trash-o icon-on-right bigger-110"></i>
+									</button>
+									<button type="button" class="btn btn-white btn-sm">
+										標示為已讀
+									</button>
+								</div>
+								<div id="status" class="tab-pane active">
+									<style type="text/css">
+										.table tr th,.table tr td {text-align:center;}
+										.table tr th:nth-child(5),.table tr td:nth-child(5) {width:65%;text-align:left;}
+									</style>
+									<table class="table table-striped table-bordered table-hover">
+										<thead>
+											<tr>
+												<th><input id="check_all_checkbox" type="checkbox" style="display:none_;"><!-- <label for="check_all_checkbox">All</label> --></th>
+												<th>狀 態</th>
+												<th>寄件人</th>
+												<th>時 間</th>
+												<th>提問內容</th>
+												<th>回 覆</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="checkbox"></td>
+												<td><b class="green">未讀</b></td>
+												<td>
+													<a href="admin_profile.html" class="tooltip-info" data-rel="tooltip" data-placement="top" data-original-title="檢視">
+														羅斯‧多伊
+													</a>
+												</td>
+												<td>2016/11/18 20:46</td>
+												<td>海亮同前選為麼人，生究綠樂研：油比代樣！健生養即明錢就見部正策部：此日上特圖工，交人新。全各病才要樓媽五個時經器下招病葉我。華不過土他。</td>
+												<td>
+													<div class="action-buttons">
+														<a href="#repost-form" data-toggle="modal" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="回應問題">
+														<i class="icon-comments-o bigger-150"></i>
+													</a>
+												</div>
+												</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox"></td>
+												<td>已讀</td>
+												<td>
+													<a href="admin_profile.html" class="tooltip-info" data-rel="tooltip" data-placement="top" data-original-title="檢視">
+														糖果‧多伊
+													</a>
+												</td>
+												<td>2016/11/18 12:02</td>
+												<td>媽地問手分便然？心本今在異遊斷也國南。</td>
+												<td>
+													<div class="action-buttons">
+														<a href="#repost-form" data-toggle="modal" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="回應問題">
+														<i class="icon-comments-o bigger-150"></i>
+													</a>
+												</div>
+												</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox"></td>
+												<td>已讀</td>
+												<td>
+													<a href="admin_profile.html" class="tooltip-info" data-rel="tooltip" data-placement="top" data-original-title="檢視">
+														愛蜜莉‧多伊
+													</a>
+												</td>
+												<td>2016/11/17 14:33</td>
+												<td>場許片力知沒，近我照景此，育子家收多竟眾團生良一裡第。</td>
+												<td>
+													<div class="action-buttons">
+														<a href="#repost-form" data-toggle="modal" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="回應問題">
+														<i class="icon-comments-o bigger-150"></i>
+													</a>
+												</div>
+												</td>
+											</tr>
+											<tr>
+												<td><input type="checkbox"></td>
+												<td>已回覆</td>
+												<td>
+													<a href="admin_profile.html" class="tooltip-info" data-rel="tooltip" data-placement="top" data-original-title="檢視">
+														保柏‧多伊
+													</a>
+												</td>
+												<td>2016/11/16 10:21</td>
+												<td>對也不動也去土上引都客家一告，節力說門專的識微化工告。總從人保軍人自讓爸想是史件轉去演中……</td>
+												<td>
+													<div class="action-buttons">
+														<a href="#repost-form" data-toggle="modal" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="回應問題">
+														<i class="icon-comments-o bigger-150"></i>
+													</a>
+												</div>
+												</td>
+											</tr>
+										</tbody>
+									</table><!-- /table1 -->
+
+									<div class="top_toolbar">
+										<button type="button" class="btn btn-danger btn-xs">
+											刪 除
+											<i class="icon-trash-o icon-on-right bigger-110"></i>
+										</button>
+										<button type="button" class="btn btn-white btn-sm">
+										標示為已讀
+									</button>
+									</div>
+
+									<div class="row">
+									  <div class="col-sm-6">
+										<div class="dataTables_info">共 4 筆資料，目前在第 1 頁。</div>
+									  </div>
+									  <div class="col-sm-6">
+										<div class="dataTables_paginate paging_bootstrap">
+										  <ul class="pagination">
+											<li class="prev disabled"><a href="#"><i class="icon-angle-double-left"></i></a></li>
+											<li class="active"><a href="#">1</a></li>
+											<li class="next"><a href="#"><i class="icon-angle-double-right"></i></a></li>
+										  </ul>
+										</div>
+									  </div>
+									</div>
+								</div>
+
+								<div class="hr hr32 hr-dotted"></div>
+								
+								<div id="repost-form" class="modal" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="blue bigger">
+												<i class="icon-comment-o"></i>
+												訊息回覆
+												</h4>
+											</div>
+
+											<div class="modal-body overflow-visible">
+
+												<div class="timeline-container timeline-style2">
+													<!-- <span class="badge badge-danger">提問編號：#123456789</span> -->
+													<div class="space-10"></div>
+
+													<div class="timeline-items">
+														<div class="timeline-item clearfix">
+															<div class="timeline-info">
+																<span class="timeline-date">06/02 9:00</span>
+
+																<i class="timeline-indicator btn btn-success no-hover"></i>
+															</div>
+
+															<div class="widget-box transparent">
+																<div class="widget-body">
+																	<div class="widget-main no-padding">
+																	
+																		<div class="clearfix">
+																			<div class="pull-left">
+																				<span class="green">羅斯‧多伊</span>
+																				我有點數問題請教
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="timeline-item clearfix">
+															<div class="timeline-info">
+																<span class="timeline-date">06/02 9:01</span>
+
+																<i class="timeline-indicator btn btn-success no-hover"></i>
+															</div>
+
+															<div class="widget-box transparent">
+																<div class="widget-body">
+																	<div class="widget-main no-padding">
+																		<span class="blue">喬·多伊</span> 
+																		可否詳加敘述
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="timeline-item clearfix">
+															<div class="timeline-info">
+																<span class="timeline-date">06/02 9:02</span>
+
+																<i class="timeline-indicator btn btn-success no-hover"></i>
+															</div>
+
+															<div class="widget-box transparent">
+																<div class="widget-body">
+																	
+																	<div class="widget-main no-padding">
+																		
+																		<div class="clearfix">
+																			<div class="pull-left">
+																				<span class="green">羅斯‧多伊</span>
+																				我的點數全部都變成零了。
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div><!-- /.timeline-items -->
+												</div><!-- /.timeline-container -->
+												<div class="row">
+													<textarea class="form-control autosize-transition" style="min-height:160px" placeholder="請在此處填寫您的回覆....."></textarea>
+												</div>
+											</div><!-- /.modal-body -->
+
+											<div class="modal-footer">
+												<button class="btn" type="button" data-dismiss="modal">
+													<!-- <i class="icon-refresh bigger-110"></i> -->
+													關 閉
+												</button>
+												&nbsp;
+												<button class="btn btn-info" type="button">
+													<!-- <i class="icon-check bigger-110"></i> -->
+													送 出
+												</button>
+											</div>
+										</div>
+									</div>
+								</div><!-- /#repost-form -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+				$('#check_all_checkbox').click(function(){
+					$('input').prop('checked', this.checked);
+				});
+
+				$('[data-rel=tooltip]').tooltip();
+			
+			});
+		</script>
+	</body>
+</html>
